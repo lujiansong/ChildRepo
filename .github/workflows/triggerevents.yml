@@ -14,7 +14,7 @@ jobs:
 
     - name: call the other repo
       env:
-        GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+        GITHUB_TOKEN: 54be48a4d7672d023ee84df09540958ff7c4bcc6
         EVENT: YOUR_EVENT_TYPE
         ORG: lujiansong
         REPO: ParentRepo
