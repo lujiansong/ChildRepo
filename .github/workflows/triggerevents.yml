@@ -15,4 +15,4 @@ jobs:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: lujiansong/ParentRepo
           event-type: my-event
-          client-payload: '{"submodule": "${{ lujiansong/ChildRepo }}"}'
+          client-payload: '{"submodule": "lujiansong/ChildRepo"}'
