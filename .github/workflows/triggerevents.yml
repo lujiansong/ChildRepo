@@ -15,7 +15,7 @@ jobs:
     - name: call the other repo
       env:
         GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
-        EVENT: YOUR_EVENT_TYPE
+        EVENT: my-event
         ORG: lujiansong
         REPO: ParentRepo
       run: |
