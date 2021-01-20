@@ -6,9 +6,6 @@ on:
     - master
 ##
 jobs:
-  build:
-    # Main workflow job that builds, tests, etc.
-
   dispatch:
     needs: build
     strategy:
