@@ -1,7 +1,24 @@
-- name: Repository Dispatch
+name: hugo publish
+
+on:
+  push:
+    branches:
+    - master
+##
+jobs:
+  build:
+    # Main workflow job that builds, tests, etc.
+
+  dispatch:
+    needs: build
+    strategy:
+      matrix:
+        repo: ['lujiansong/ParentRepo']
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          repository: lujiansong/ParentRepo
+          repository: ${{ matrix.repo }}
           event-type: my-event
-          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
