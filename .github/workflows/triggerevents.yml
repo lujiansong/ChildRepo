@@ -4,14 +4,8 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-      with:
-        fetch-depth: 1
-
     - name: call the other repo
       env:
         GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
